@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dash_frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView7"
+        android:layout_width="355dp"
+        android:layout_height="161dp"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082"
+        card_view:cardCornerRadius="40sp">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="319dp"
+            android:layout_height="78dp"
+            android:fontFamily="@font/lato_bold"
+            android:paddingLeft="20sp"
+            android:paddingTop="35sp"
+            android:text="Welcome...\n"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="329dp"
+            android:layout_height="111dp"
+            android:paddingLeft="20sp"
+            android:paddingTop="90sp"
+            android:text="Practice Makes a Man Perfect... :)" />
+
+        <ImageView
+            android:id="@+id/imageView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="250sp"
+            android:paddingTop="28sp"
+            android:src="@drawable/person_icn" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:paddingLeft="285dp"
+            android:paddingTop="140dp"
+            android:text="C.M.S"
+            android:textColor="@color/black" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="180dp"
+        android:layout_height="104dp"
+        android:layout_gravity="center"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        app:layout_constraintVertical_bias="0.085"
+        card_view:cardCornerRadius="20sp">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:paddingLeft="20sp"
+            android:paddingTop="40sp"
+            android:text="Tests"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="110dp"
+            android:paddingTop="20dp"
+            android:src="@drawable/test_icn" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="180dp"
+        android:layout_height="104dp"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.165"
+        card_view:cardCornerRadius="20sp">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="112dp"
+            android:layout_height="71dp"
+            android:fontFamily="@font/lato"
+            android:paddingLeft="20sp"
+            android:paddingTop="40sp"
+            android:text="About"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="90dp"
+            android:paddingTop="18dp"
+            android:src="@drawable/about_icn" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="180dp"
+        android:layout_height="104dp"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView7"
+        app:layout_constraintVertical_bias="0.072"
+        card_view:cardCornerRadius="20sp">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:paddingLeft="100sp"
+            android:paddingTop="40sp"
+            android:text="Faculty"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8sp"
+            android:paddingTop="15sp"
+            android:src="@drawable/faculty_icn" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="180dp"
+        android:layout_height="104dp"
+        android:layout_gravity="center"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintVertical_bias="0.073"
+        card_view:cardCornerRadius="20sp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/cardView7">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:paddingLeft="20sp"
+            android:paddingTop="40sp"
+            android:text="Courses"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="213dp"
+            android:layout_height="86dp"
+
+            android:paddingLeft="60sp"
+            android:paddingTop="10sp"
+            android:src="@drawable/course_icn" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="180dp"
+        android:layout_height="104dp"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4"
+        app:layout_constraintVertical_bias="0.085"
+        card_view:cardCornerRadius="20sp">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="214dp"
+            android:layout_height="91dp"
+            android:paddingLeft="100sp"
+            android:paddingTop="40sp"
+            android:text="Insights"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8sp"
+            android:paddingTop="15sp"
+            android:src="@drawable/insights_icn" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/batches"
+        android:layout_width="180dp"
+        android:layout_height="104dp"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toEndOf="@+id/cardView6"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5"
+        app:layout_constraintVertical_bias="0.169"
+        card_view:cardCornerRadius="20sp">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:paddingLeft="100sp"
+            android:paddingTop="40sp"
+            android:text="Batches"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="73dp"
+            android:layout_height="77dp"
+            android:paddingLeft="8sp"
+            android:paddingTop="20sp"
+            android:src="@drawable/group_icn" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="130dp"
+        android:layout_height="366dp"
+        android:src="@drawable/vector_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="419dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="148dp"
+        android:rotation="90"
+        android:src="@drawable/vector_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coaching Management System"
+        android:textColor="#8D8E8E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.872" />
+
+    <!--<androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView2"
+        android:name="com.example.myapplication.DashCourse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
