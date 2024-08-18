@@ -1,0 +1,133 @@
+--Warning: Please don't use this script for database creation.
+--This script will create a database in the MySQL Workbench and use your root and password for this databse.
+
+-- Create Students Table
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    date_of_birth DATE,
+    phone VARCHAR(20),
+    email VARCHAR(100),
+    address VARCHAR(255),
+    enrollment_date DATE,
+    payment_history TEXT
+);
+
+-- Create Courses Table
+CREATE TABLE courses (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(100),
+    description TEXT,
+    syllabus TEXT,
+    duration INT,
+    fee_structure DECIMAL(10, 2),
+    instructors TEXT
+);
+
+-- Create Batches Table
+CREATE TABLE batches (
+    batch_id INT PRIMARY KEY,
+    course_id INT,
+    start_date DATE,
+    end_date DATE,
+    schedule VARCHAR(255),
+    instructors TEXT,
+    classroom VARCHAR(100),
+    FOREIGN KEY (course_id) REFERENCES courses(course_id)
+);
+
+-- Create Attendance Table
+CREATE TABLE attendance (
+    attendance_id INT PRIMARY KEY,
+    student_id INT,
+    batch_id INT,
+    date DATE,
+    status VARCHAR(20),
+    remarks TEXT,
+    FOREIGN KEY (student_id) REFERENCES students(student_id),
+    FOREIGN KEY (batch_id) REFERENCES batches(batch_id)
+);
+
+-- Create Exams Table
+CREATE TABLE exams (
+    exam_id INT PRIMARY KEY,
+    course_id INT,
+    exam_date DATE,
+    exam_type VARCHAR(50),
+    topics TEXT,
+    grading_criteria TEXT,
+    FOREIGN KEY (course_id) REFERENCES courses(course_id)
+);
+
+-- Create Exam Results Table
+CREATE TABLE exam_results (
+    result_id INT PRIMARY KEY,
+    student_id INT,
+    exam_id INT,
+    marks_obtained DECIMAL(5, 2),
+    grade VARCHAR(10),
+    remarks TEXT,
+    FOREIGN KEY (student_id) REFERENCES students(student_id),
+    FOREIGN KEY (exam_id) REFERENCES exams(exam_id)
+);
+
+-- Create Payments Table
+CREATE TABLE payments (
+    payment_id INT PRIMARY KEY,
+    student_id INT,
+    payment_date DATE,
+    amount DECIMAL(10, 2),
+    payment_method VARCHAR(50),
+    status VARCHAR(20),
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
+);
+
+-- Create Users Table
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    username VARCHAR(50) UNIQUE,
+    password_hash VARCHAR(100),
+    role VARCHAR(20)
+);
+
+-- Create Notifications Table
+CREATE TABLE notifications (
+    notification_id INT PRIMARY KEY,
+    student_id INT,
+    message TEXT,
+    date_time DATETIME,
+    read_status BOOLEAN,
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
+);
+
+-- Create Enrollments Table
+CREATE TABLE enrollments (
+    enrollment_id INT PRIMARY KEY,
+    student_id INT,
+    batch_id INT,
+    enrollment_date DATE,
+    enrollment_status VARCHAR(20),
+    FOREIGN KEY (student_id) REFERENCES students(student_id),
+    FOREIGN KEY (batch_id) REFERENCES batches(batch_id)
+);
+-- Create Tests Table
+CREATE TABLE tests (
+    test_id INT PRIMARY KEY,
+    course_id INT,
+    question VARCHAR(100),
+    opt_a TEXT,
+    opt_b TEXT,
+    opt_c TEXT,
+    opt_d TEXT,
+    correct_ans TEXT,
+    user_ans TEXT,
+    -- Add other columns as needed
+    FOREIGN KEY (course_id) REFERENCES courses(course_id)
+);
+
+Developed By:
+Vaibhav Mishra
+B.tech CSE UIET KANPUR
